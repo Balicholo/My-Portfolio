@@ -29,6 +29,26 @@
             websites, or crafting visually appealing graphics, I`m dedicated to delivering high-qaulity results 
             that exceed expectations.
            </p>
+
+           <div class="dropdown-container">
+            <p class="small-heading-dropdown">
+              CLICK ON THE DROPDOWN AND CHECK WEBSITES DEPLOYED 
+              <img src="./assets/images/dropdown-icon.png" alt="dropdown-icon" class="dropdown-icon" width="20px" height="10px">
+            </p>
+            <p class="dropdown-text">
+            <a href="https://wisdomb-zim-e-passport.netlify.app/">Zim-e Passport <i class="ri-external-link-line"></i></a>
+            <br>
+            <a href="https://house-of-cupboards.netlify.app/">House Of Cupboards <i class="ri-external-link-line"></i></a>
+            <br>
+            <a href="https://www.linkedin.com/in/wisdom-balicholo-20b517304">Linked-In <i class="ri-external-link-line"></i></a>
+            <br>
+            <a href="https://wisdom-balicholo-tigzozo.netlify.app/">Tigzozo media <i class="ri-external-link-line"></i></a>
+            <br>
+            <a href="https://wisdom-genesis-project.netlify.app/">Genesis Block Africa <i class="ri-external-link-line"></i></a>
+            <br>
+            <a href="https://wisdom-login-form.netlify.app/">Login Form <i class="ri-external-link-line"></i></a>
+            </p>
+          </div>
         </div>
     
 <!-- PROJECTS COLLAGE -->
@@ -72,8 +92,44 @@
   <div class="tall">
     <img src="./assets/images/Nyamatusi.png" alt="">
   </div>
+  <div>
+    <img src="./assets/images/Tropical.jpg" alt="">
+  </div>
+  <div>
+    <img src="./assets/images/Orange.jpg" alt="">
+  </div>
+  <div>
+    <img src="./assets/images/Strewberry.jpg" alt="">
+  </div>
+  <div>
+    <img src="./assets/images/Sammie.png" alt="">
+  </div>
+  <div class="wide">
+    <img src="./assets/images/MY LOGO.png" alt="">
+  </div>
+  <div>
+    <img src="./assets/images/Hoodie.jpg" alt="">
+  </div>
+  <div>
+    <img src="./assets/images/t-shirt.jpg" alt="">
+  </div>
+  <div class="wide">
+    <img src="./assets/images/wisdom.png" alt="">
+  </div>
 </div>
     </section>
 
+<script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const dropdownIcons = document.querySelectorAll('.dropdown-icon');
+
+    dropdownIcons.forEach(function(icon) {
+        icon.addEventListener('click', function() {
+            const dropdownText = this.closest('.dropdown-container').querySelector('.dropdown-text');
+            dropdownText.classList.toggle('show');
+        });
+    });
+});
+</script>
 </body>
 </html>
