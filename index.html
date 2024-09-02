@@ -71,9 +71,8 @@
                 <h3 class="home__education">Front-end Developer</h3>
 
                 <p class="home__description">
-                    With knowledge in web development and
-                    design, I offer the best projects resulting in 
-                    qaulity work.
+                  Join me on this adventure, as we push boundaries, challenge conventions, and 
+                  bring ideas to life. Let`s create something amazing together!
                 </p>
 
                 <a href="./assets/images/Wisdom-Balicholo CV.pdf" class="button" target="_blank" download="">Download CV</a>
@@ -97,7 +96,7 @@
            <div class="home__image">
 
           <div class="blob">
-            <img class="home-image" src="./assets/images/me.png" alt="" width="200" height="200">
+            <img class="home-image" src="./assets/images/home.img.png" alt="" width="200" height="200">
           </div>
 
            </div>
@@ -116,9 +115,17 @@
            </h2>
           
            <p class="about__description">
-            Front-end developer and Designer, I create web pages with
-            UI/UX user interface, I have years of experience, passion and creativity skills.
-            I have worked for different clients as a freelancer.
+            I began my journey in web development by creating websites for <a href="https://uncommon.org/">Uncommon.org</a>. My
+            designing journey started at <a href="https://en.wikipedia.org/wiki/Harare_Polytechnic">Harare Polytechnic</a>, where
+            l was pursuing Graphic Designing. This experience significantly boosted my confidence and technical skills, 
+            eventually leading me to explore mobile app development. My website was developed for <a href="https://laintelligence.netlify.app/">La Intelligence Pvt Ltd</a>, 
+            marking a pivotal moment in my career. Since then, I have completed various projects on Upwork.
+           </p>
+
+           <p class="about__description">
+            Currently, I am delving deep into the realms of Artificial Intelligence (AI) and Machine Learning (ML) to integrate 
+            these advanced technologies into my applications. This ongoing education will allow me to enhance the functionality 
+            and user experience of my future projects
            </p>
 
            <a href="#contact" class="button">Contact Me</a>
@@ -145,8 +152,8 @@
 
             <p class="skills__description">
               See fully what skills I have and perfom,
-              to develop the projects for you. This is how l 
-              Design digital dreams, one step at a time
+              to Develop the projects for you and how l 
+              Design digital dreams, one step at a time.
             </p>
 
             <a href="#projects" class="button">See Projects</a>
@@ -157,13 +164,18 @@
               <li class="skills__item">HTML & CSS</li>
               <li class="skills__item">Javascript</li>
               <li class="skills__item">Bootstrap</li>
-              <li class="skills__item">Scratch</li>
+              <li class="skills__item">React</li>
+              <li class="skills__item">Git & Github</li>
+              <li class="skills__item">Python</li>
             </ol>
 
             <ol class="skills__group" start="5">
-              <li class="skills__item">Git & Github</li>
+              <li class="skills__item">Netlify</li>
+              <li class="skills__item">Vercel</li>
+              <li class="skills__item">Photoshop</li>
               <li class="skills__item">Figma</li>
-              <li class="skills__item">Other</li>
+              <li class="skills__item">Adobe suit</li>
+              <li class="skills__item">Corel draw</li>
             </ol>
           </div>
         </div>
@@ -186,9 +198,8 @@
             <h2 class="services__title">Web Developer</h2>
 
             <p class="services__description">
-              Development of custom web pages.
-              Using current technologies and libraries of 
-              the labour field.
+               Software Development: Exploring the latest technologies to build
+               robust, scalable, and efficient solutions.
             </p>
           </article>
 
@@ -319,6 +330,11 @@
         <h2 class="section__title">
           Contact Me
         </h2>
+        <p class="my-contact-info">
+          I'm always on the lookout for new opportunities and my inbox is open for all. 
+          If you're considering my contribution, have a question, or just want to say hi, 
+          you can count on hearing back from me!
+        </p>
 
         <div class="contact__container container grid">
           <form action="" class="contact__form" id="contact-form">
@@ -326,12 +342,15 @@
               <input type="text" name="user_name" required placeholder="Enter your name" class="contact__input">
               <input type="email" name="user_email" required placeholder="Enter your email" class="contact__input">
             </div>
-
+        
             <textarea name="user_project" required placeholder="Enter your message" class="contact__input"></textarea>
-
-            <p class="contact__message" id="contact-message"></p>
-
-            <button type="submit" class="button contact__button">Send Message</button>
+        
+            <p class="contact__message" id="contact-message">
+              <!-- Spinner -->
+              <div id="spinner" class="spinner" style="display: none;"></div>
+            </p>
+        
+            <button type="submit" class="button contact__button"><a href="mailto:wisdombalicholo@gmail.com">Send Message</a></button>
           </form>
         </div>
       </section>
@@ -378,8 +397,12 @@
       <script src="./scrollreveal-min.js"></script>
 
       <!-- EMAIL-JS -->
-      <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-
+      <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+      <script>
+        (function() {
+          emailjs.init("YOUR_USER_ID"); // Replace with your User ID from EmailJS
+        })();
+      </script>
       <!-- MAIN-JS -->
       <script src="./main.js"></script>
 </body>

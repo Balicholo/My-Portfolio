@@ -37,35 +37,25 @@ const blurHeader = () =>{
 window.addEventListener('scroll', blurHeader)
 
 //  EMAIL JS
+document.getElementById("contact-form").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent the default form submission
+    
+    // Show spinner
+    document.getElementById("spinner").style.display = "block";
 
-const contactForm = document.getElementById('contact-form'),
-      contactMessage = document.getElementById('contact-message')
-
-const sendEmail = (e) =>{
-    e.preventDefault()
-
-    // SERVICE ID - TEMPLATE - #FORM - PUBLIC KEY
-    emailjs.sendForm('service_s1e94am', 'template_udqsghp', '#contact-form', 'NsKjurVRcXWkKzRfU')
-     .then(() =>{
-        // SHOW SENT MESSAGE
-        contactMessage.textContent = 'Message sent successfully ✅'
-
-        // REMOVE MESSAGE AFTER FIVE SECONDS
-        setTimeout(() =>{
-            contactMessage.textContent = ''
-        }, 5000)
-
-        // CLEAR FIELD
-        contactForm.requestFullscreen()
-
-     }, () =>{
-    //   SHOW ERROR MESSAGE
-    contactMessage.textContent = 'Message not sent(try WhatsApp) ❌'
-     })
-}
-
-contactForm.addEventListener('submit', sendEmail)
-
+    // Send the email using EmailJS
+    emailjs.sendForm('service_v17ivv8', 'template_7qo7xuf', this)
+      .then(function(response) {
+        console.log('SUCCESS!', response.status, response.text);
+        document.getElementById("contact-message").innerHTML = "Your message has been sent successfully!";
+      }, function(error) {
+        console.error('FAILED...', error);
+        document.getElementById("contact-message").innerHTML = "An error occurred while sending your message.";
+      }).finally(() => {
+        // Hide spinner
+        document.getElementById("spinner").style.display = "none";
+      });
+  });
 // SHOW SCROLL UP
 const scrollUp = () =>{
 	const scrollUp = document.getElementById('scroll-up')
