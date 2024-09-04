@@ -37,25 +37,47 @@ const blurHeader = () =>{
 window.addEventListener('scroll', blurHeader)
 
 //  EMAIL JS
-document.getElementById("contact-form").addEventListener("submit", function(event) {
+document.getElementById('contactForm').addEventListener('submit', async function (event) {
     event.preventDefault(); // Prevent the default form submission
-    
-    // Show spinner
-    document.getElementById("spinner").style.display = "block";
 
-    // Send the email using EmailJS
-    emailjs.sendForm('service_v17ivv8', 'template_7qo7xuf', this)
-      .then(function(response) {
-        console.log('SUCCESS!', response.status, response.text);
-        document.getElementById("contact-message").innerHTML = "Your message has been sent successfully!";
-      }, function(error) {
-        console.error('FAILED...', error);
-        document.getElementById("contact-message").innerHTML = "An error occurred while sending your message.";
-      }).finally(() => {
-        // Hide spinner
-        document.getElementById("spinner").style.display = "none";
+    const form = event.target;
+    const formData = new FormData(form);
+    const formMessage = document.getElementById('formMessage');
+
+    try {
+      // Send a POST request to Formspree
+      const response = await fetch('https://formspree.io/f/mrbzdbne', {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' },
       });
+
+      if (response.ok) {
+        // Success message
+        showMessage('Thank you! Your message has been sent successfully.', 'rgb(30, 160, 117)');
+        form.reset(); // Optionally reset the form fields after submission
+      } else {
+        // Error message
+        showMessage('Check your Email and try again.', 'red');
+      }
+    } catch (error) {
+      // Network or other errors
+      showMessage('An error occurred. Please check your connection and try again.', 'red');
+    }
   });
+
+  function showMessage(message, color) {
+    const formMessage = document.getElementById('formMessage');
+    formMessage.textContent = message;
+    formMessage.style.color = color;
+    formMessage.style.display = 'block';
+
+    // Hide the message after 10 seconds
+    setTimeout(() => {
+      formMessage.textContent = '';
+      formMessage.style.display = 'none';
+    }, 3000); // 10 seconds in milliseconds
+  }
 // SHOW SCROLL UP
 const scrollUp = () =>{
 	const scrollUp = document.getElementById('scroll-up')
@@ -101,3 +123,5 @@ sr.reveal(`.home__image`, {origin: 'bottom'})
 sr.reveal(`.about__data, .skills__data`, {origin: 'left'})
 sr.reveal(`.about__image, .skills__content`, {origin: 'right'})
 sr.reveal(`.services__card, .projects__cards`, {interval: 200})
+// COROUSEL
+  
