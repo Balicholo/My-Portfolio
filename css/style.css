@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rubik+Dirt&display=swap');
+/* font-family: "Rubik Dirt", system-ui; */
+
+
 /* DEFAULT: HSL(162, 100%, 40%)
 ORANGE: HSL(14, 100%, 65%) - BLUE: HSL(210, 100%, 70%)
 PINK: HSL(365, 100%, 75%) - PURPLE: HSL(250, 100%, 75%) */
@@ -8,8 +12,8 @@ PINK: HSL(365, 100%, 75%) - PURPLE: HSL(250, 100%, 75%) */
     --first-color-alt: hsl(var(--hue), 56% 35%);
     --title-color: hsl(228, 8%, 95%);
     --text-color: hsl(228, 8%, 65%);
-    --body-color: hsl(228, 15%, 20%);
-    --container-color: hsl(228, 15%, 15%);
+    --body-color: hsl(0, 0%, 100%);
+    --container-color: hsl(208, 100%, 10%);
 
     /* font and typography */
     /* 5rem = 8px and 1rem = 16px */
@@ -66,6 +70,9 @@ body{
 
 body{
     background-color: var(--body-color);
+    background-image: url(../assets/images/pattern.png);
+    background-position: center;
+    background-size: 600px;
     color: var(--text-color);
 
 }
@@ -127,7 +134,7 @@ grid{
 }
 
 .section__subtitle span{
-    color: var(--first-color);
+    color: hsl(208, 100%, 10%);
 }
 
 .main{
@@ -153,18 +160,17 @@ grid{
 .nav__logo{
     color: var(--title-color);
     font-weight: var(--font-medium);
-    /* margin-left: -460px; */
 }
 
 .nav__logo span{
-    color: var(--first-color);
+    color: hsl(208, 100%, 50%);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 19px;
 }
 .cicle{
     width: 20px;
     height: 20px;
-    background-color: rgb(30, 160, 117);
+    background-color: hsl(208, 100%, 50%);
     border-radius: 20px;
     margin: 0px 0px -21px -3px;
 }
@@ -204,7 +210,7 @@ grid{
 }
 
 .nav__link:hover{
-    color: var(--first-color);
+    color: hsl(208, 100%, 50%);
     font-size: 20px;
     transition: 2ms;
 }
@@ -225,7 +231,6 @@ grid{
     background-image: url(../assets/images/pentagon-made-of-stars-svgrepo-com.svg);
     background-position: center;
     background-size: cover;
-    color: rgba(25, 136, 101, 0.644);
     margin: 0 auto;
     .home-image{
       margin-left: 55px;
@@ -235,11 +240,21 @@ grid{
 
 /* ACTIVE LINK */
 .active-link{
-    color: var(--first-color);
+    color: hsl(208, 100%, 50%);
 }
 /* HOME */
 .home{
-    background-color: var(--container-color);
+    /* background-color: var(--container-color); */
+    background-image: url(../assets/images/Wallpaper.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+.blur-filter{
+    background-color: rgba(0, 124, 155, 0.199);
+    backdrop-filter: blur(30px);
+    width: 100%;
+    height: 100%;
+    padding-block: 7rem 2rem;
 }
 .home__container{
     padding-top: 2rem;
@@ -256,17 +271,22 @@ grid{
  .home__subtitle,
  .home__education{
     font-size: var(--biggest-font-size);
+    font-family: "Rubik Dirt", system-ui;
+    font-weight: 100;
  }
  .home__subtitle span,
  .home__title{
-    color: var(--first-color);
+    /* color: var(--first-color); */
+    color: hsl(208, 100%, 10%);
  }
  .home__title{
     font-size: var(--biggest-font-size);
-    font-weight: var(--font-semi-bold);
+    font-family: "Rubik Dirt", system-ui;
  }
  .home__description{
     margin-block: 1rem 1.5rem;
+    color: white;
+    
  }
  .home__social{
     display: flex;
@@ -275,7 +295,7 @@ grid{
  }
  .home__social-link{
     display: flex;
-    background-color: var(--first-color);
+    background-color: hsl(208, 100%, 10%);
     padding: .5rem;
     color: var(--title-color);
     font-size: 1.5rem;
@@ -288,7 +308,7 @@ grid{
 /* BUTTON */
 .button{
     display: inline-block;
-    background-color: var(--first-color);
+    background-color:  hsl(208, 100%, 10%);
     padding: 1rem 1.75rem;
     border-radius: 2rem;
     color: var(--title-color);
@@ -296,9 +316,9 @@ grid{
     transition: box-shadow .4s;
 }
 .button:hover{
-    box-shadow: 0 8px 24px hsl(var(--hue), 100%, 40%, .25);
+    box-shadow: 0 8px 24px  hsl(208, 100%, 23%);
     background-color: transparent;
-    border: 2px solid hsl(var(--hue), 100%, 40%);
+    border: 2px solid  hsl(208, 100%, 10%);
 }
 /* ABOUT */
 .rays{
@@ -307,9 +327,7 @@ grid{
     height: 450px;
     background-position: center;
     background-size: cover;
-    /* margin: 0 auto; */
     @media (min-width:320px) and (max-width: 460px) {
-        /* margin-left: -88px; */
         margin: 0 auto;
         width: 100%;
         height: 100%;
@@ -324,7 +342,6 @@ grid{
   margin-top: 132px;
   @media (min-width:320px) and (max-width: 460px) {
     margin-left: 20%;
-    /* margin: 0 auto; */
     
 }
 }
@@ -334,11 +351,24 @@ grid{
 }
 .about__data{
     text-align: center;
+    .section__subtitle{
+        color: rgb(105, 105, 105);
+    }
+    .section__title{
+        color: rgb(105, 105, 105);
+        font-family: "Rubik Dirt", system-ui;
+        font-weight: 200;
+    }
+    .button:hover{
+      color: hsl(208, 100%, 10%);
+      box-shadow: 0 0 10px  hsl(208, 100%, 23%);
+    }
 }
 .about__description{
   margin-bottom: 2rem;
+  color: rgb(105, 105, 105);
   a{
-    color: rgb(32, 180, 123);
+    color: hsl(208, 100%, 10%);
     font-weight: 600;
   }
 }
@@ -363,6 +393,8 @@ grid{
 /* SKILLS */
 .skills{
     background-color: var(--container-color);
+    background-image: url(../assets/images/portfolio-image.png);
+    background-size: 600px;
 }
  .skills__container{
     padding-bottom: 2rem;
@@ -373,6 +405,20 @@ grid{
  }
 .skills__data{
     text-align: center;
+    .section__subtitle span{
+        color: hsl(208, 100%, 50%);
+    }
+    .section__title{
+        font-family: "Rubik Dirt", system-ui;
+        font-weight: 100;
+    }
+    .button{
+        border: 2px solid hsl(208, 100%, 50%);
+        background-color: transparent;
+    }
+    .button:hover{
+        background-color: hsl(208, 100%, 50%);
+    }
 }
 .skills__description{
     margin-bottom: 2rem;
@@ -400,10 +446,20 @@ grid{
 }
 
 .skills__item::marker{
-    color: var(--first-color);
+    color: hsl(208, 100%, 50%);
 }
 
 /* SERVICES */
+#services{
+    .section__subtitle{
+        color: rgb(105, 105, 105);
+    }
+    .section__title{
+        color: rgb(105, 105, 105);
+        font-family: "Rubik Dirt", system-ui;
+        font-weight: 100;
+    }
+}
 .services__container{
     display: grid;
     row-gap: 2rem;
@@ -422,12 +478,13 @@ grid{
 .services__card:hover{
     transform: scale(1.05);
     transition: 1s;
-    border: 2px solid var(--first-color);
+    border: 2px solid hsl(208, 100%, 50%);
+    box-shadow: 0 0 10px hsl(208, 100%, 61%);
 }
 .services__icon{
     display: block;
     font-size: 4rem;
-    color: var(--first-color);
+    color: hsl(208, 100%, 50%);
     margin-bottom: .75rem;
 }
 .services__title{
@@ -438,6 +495,32 @@ grid{
 /* PROJECTS */
 .projects{
     background-color: var(--container-color);
+    background-image: url(../assets/images/developer-outline.png);
+    background-position: center;
+    background-size: contain;
+    .section__subtitle span{
+        color: hsl(208, 100%, 61%);
+    }
+    .section__title{
+        font-family: "Rubik Dirt", system-ui;
+        font-weight: 100;
+    }
+    .button{
+        border: 2px solid white;
+        a{
+            color: white;
+            font-weight: 800;
+        }
+    }
+    .button:hover{
+        border: none;
+        background-color: hsl(208, 100%, 61%);
+    }
+}
+.view-more-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .projects__container{
     display: grid;
@@ -474,9 +557,14 @@ grid{
     transition: bottom .4s;
 }
 
-.projects__subtitle,
+.projects__subtitle{
+    color: var(--title-color);
+}
 .projects__button{
     color: var(--title-color);
+    background-color: hsl(208, 100%, 61%);
+    padding: 8px;
+    border-radius: 12px;
 }
 
 .projects__subtitle{
@@ -506,12 +594,23 @@ grid{
 }
 
 /* CONTACT */
+#contact{
+    .section__subtitle{
+        color: rgb(105, 105, 105);
+    }
+    .section__title{
+        color: rgb(105, 105, 105);
+        font-family: "Rubik Dirt", system-ui;
+        font-weight: 100;
+    }
+}
 
 .contact__container{
     padding-top: 1rem;
 }
 .my-contact-info{
     width: 60%;
+    color: rgb(105, 105, 105);
     text-align: center;
     margin: auto;
     @media (max-width: 400px) {
@@ -551,6 +650,11 @@ grid{
     justify-self: center;
     cursor: pointer;
 }
+.contact__button:hover{
+    color: hsl(208, 100%, 10%);
+    box-shadow: 0 0 10px hsl(208, 100%, 23%);
+    font-weight: 700;
+}
 
 .contact__message{
     /* position: absolute; */
@@ -565,6 +669,9 @@ grid{
 .footer{
     background-color: var(--container-color);
     padding-block: 3.5rem 2rem;
+    background-image: url(../assets/images/holding-hands.png);
+    background-size: 500px;
+    
 }
 
 .footer__container{
@@ -580,7 +687,7 @@ grid{
 }
 
 .footer__title span{
-    color: var(--first-color);
+    color: hsl(208, 100%, 61%);
 }
 
 .footer__education{
@@ -595,7 +702,7 @@ grid{
 
 .footer__social-link{
     display: flex;
-    background-color: var(--first-color);
+    background-color: hsl(208, 100%, 50%);
     padding: .5rem;
     color: var(--title-color);
     font-size: 1.5rem;
@@ -615,17 +722,17 @@ grid{
 ::-webkit-scrollbar{
     width: .6rem;
     border-radius: .5rem;
-    background-color: hsl(228, 12%, 25%);
+    background-color: hsl(221, 23%, 30%);
 }
 
 ::-webkit-scrollbar-thumb{
-    background-color: var(--first-color);
+    background-color: hsl(208, 100%, 61%);
     border-radius: .5rem;
 }
 
 ::-webkit-scrollbar-thumb:hover{
-    background-color: rgb(169, 255, 219);
-    box-shadow: 0px 0px 10px rgb(169, 255, 219);
+    background-color: hsl(208, 100%, 74%);
+    box-shadow: 0px 0px 10px hsl(208, 90%, 80%);
 }
 
 /* SCROLL-UP */
@@ -637,7 +744,7 @@ grid{
     padding: 6px;
     display: inline-flex;
     border-radius: .25rem;
-    color: var(--first-color);
+    color: hsl(208, 100%, 10%);
     font-size: 1.25rem;
     box-shadow: 0 4px 12px hsla(222, 14%, 19%, 0.4);
     z-index: var(--z-tooltip);
@@ -832,7 +939,7 @@ grid{
    }
    .projects__container{
     grid-template-columns: repeat(3, 350px);
-    row-gap: 3rem;
+    /* row-gap: 3rem; */
     padding-block: 2.5rem 4rem;
    }
    .projects__button{
@@ -883,10 +990,12 @@ grid{
 #project-section{
     width: 100%;
     background-color: var(--container-color);
+    background-image: url(../assets/images/pattern.png);
+    background-size: 800px;
     padding: 50px 0 80px;
 }
 .projects-subtitle span{
-    color: var(--first-color);
+    color: hsl(208, 100%, 61%);
     font-size: var(--font-medium);
 }
 .projects-heading{
@@ -901,6 +1010,8 @@ grid{
     }
 }
 .projects-title{
+    font-family: "Rubik Dirt", system-ui;
+    font-weight: 100;
     @media (min-width:576px) {
         font-size: 2rem; 
     }
@@ -968,6 +1079,8 @@ grid{
     color: rgb(206, 206, 206);
     margin: 50px 20px 20px;
     text-align: left;
+    font-family: "Rubik Dirt", system-ui;
+    font-weight: 100;
     @media (max-width: 512px) {
         text-align: center;
     }
@@ -1003,7 +1116,7 @@ grid{
     height: 240px; */
     user-select: none;
     display: block;
-    background-color: hsl(228, 12%, 25%);
+    background-color: hsl(208, 100%, 14%);
     border-bottom-right-radius: 8px;
     border-bottom-left-radius: 8px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.432);
@@ -1042,13 +1155,86 @@ grid{
     width: 10px;
     height: 10px;
     font-size: 20px;
-    color: rgb(32, 180, 123);
+    color: hsl(208, 100%, 61%);
     margin-right: 10px;
 }
 .designs-wrapper .swiper-button-next{
     width: 10px;
     height: 10px;
     font-size: 20px;
-    color: rgb(32, 180, 123);
+    color: hsl(208, 100%, 61%);
     margin-left: 10px;
 }
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  .sk-cube-grid {
+    width: 40px;
+    height: 40px;
+    margin: 100px auto;
+  }
+  
+  .sk-cube-grid .sk-cube {
+    width: 33%;
+    height: 33%;
+    background-color: hsl(208, 100%, 10%);
+    float: left;
+    -webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+            animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out; 
+  }
+  .sk-cube-grid .sk-cube1 {
+    -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s; }
+  .sk-cube-grid .sk-cube2 {
+    -webkit-animation-delay: 0.3s;
+            animation-delay: 0.3s; }
+  .sk-cube-grid .sk-cube3 {
+    -webkit-animation-delay: 0.4s;
+            animation-delay: 0.4s; }
+  .sk-cube-grid .sk-cube4 {
+    -webkit-animation-delay: 0.1s;
+            animation-delay: 0.1s; }
+  .sk-cube-grid .sk-cube5 {
+    -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s; }
+  .sk-cube-grid .sk-cube6 {
+    -webkit-animation-delay: 0.3s;
+            animation-delay: 0.3s; }
+  .sk-cube-grid .sk-cube7 {
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s; }
+  .sk-cube-grid .sk-cube8 {
+    -webkit-animation-delay: 0.1s;
+            animation-delay: 0.1s; }
+  .sk-cube-grid .sk-cube9 {
+    -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s; }
+  
+  @-webkit-keyframes sk-cubeGridScaleDelay {
+    0%, 70%, 100% {
+      -webkit-transform: scale3D(1, 1, 1);
+              transform: scale3D(1, 1, 1);
+    } 35% {
+      -webkit-transform: scale3D(0, 0, 1);
+              transform: scale3D(0, 0, 1); 
+    }
+  }
+  
+  @keyframes sk-cubeGridScaleDelay {
+    0%, 70%, 100% {
+      -webkit-transform: scale3D(1, 1, 1);
+              transform: scale3D(1, 1, 1);
+    } 35% {
+      -webkit-transform: scale3D(0, 0, 1);
+              transform: scale3D(0, 0, 1);
+    } 
+  }  

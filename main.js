@@ -124,4 +124,8 @@ sr.reveal(`.about__data, .skills__data`, {origin: 'left'})
 sr.reveal(`.about__image, .skills__content`, {origin: 'right'})
 sr.reveal(`.services__card, .projects__cards`, {interval: 200})
 // COROUSEL
-  
+
+window.addEventListener('load', () => {
+  const preloader = document.getElementById('preloader');
+  preloader.style.display = 'none';
+});

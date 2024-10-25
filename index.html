@@ -13,6 +13,20 @@
 
 </head>
 <body>
+  <div id="preloader">
+    <div class="sk-cube-grid">
+      <div class="sk-cube sk-cube1"></div>
+      <div class="sk-cube sk-cube2"></div>
+      <div class="sk-cube sk-cube3"></div>
+      <div class="sk-cube sk-cube4"></div>
+      <div class="sk-cube sk-cube5"></div>
+      <div class="sk-cube sk-cube6"></div>
+      <div class="sk-cube sk-cube7"></div>
+      <div class="sk-cube sk-cube8"></div>
+      <div class="sk-cube sk-cube9"></div>
+    </div>
+  </div>
+  
     <!-- header -->
       <header class="header" id="header">
         <nav>
@@ -58,7 +72,8 @@
       <!-- main -->
       <main class="main">
        <!-- HOME -->
-       <section class="home section" id="home">
+       <section class="home" id="home">
+        <div class="blur-filter">
          <div class="home__container container grid">
            <div class="home__content">
              <div class="home__data">
@@ -68,11 +83,13 @@
 
                 <h1 class="home__title">Wisdom Balicholo</h1>
 
-                <h3 class="home__education">Front-end Developer</h3>
+                <h3 class="home__education">Software Developer</h3>
 
                 <p class="home__description">
-                  Join me on this adventure, as we push boundaries, challenge conventions, and 
-                  bring ideas to life. Let`s create something amazing together!
+                  Creative software developer, UX/UI designer, and graphic designer with a passion for crafting
+                   intuitive digital experiences. I bring a unique blend of technical skills and design 
+                   expertise to deliver innovative solutions that not only meet business goals but also 
+                   delight users. Let's build something great together
                 </p>
 
                 <a href="./assets/images/Wisdom-Balicholo CV.pdf" class="button" target="_blank" download="">Download CV</a>
@@ -84,7 +101,7 @@
                </a>
 
                <a href="https://wa.link/qkjj3f" target="_blank" class="home__social-link">
-                <i class="ri-whatsapp-fill"></i>
+                <i class="ri-whatsapp-line"></i>
                </a>
 
                <a href="https://www.linkedin.com/in/wisdom-balicholo-20b517304" target="_blank" class="home__social-link">
@@ -101,6 +118,7 @@
 
            </div>
          </div>
+        </div>
        </section>
        <!-- ABOUT -->
       <section class="about section" id="about">
@@ -193,7 +211,14 @@
 
         <div class="services__container container grid">
           <article class="services__card">
-            <i class="ri-layout-3-line services__icon"></i>
+            <!-- <i class="ri-layout-3-line services__icon"></i> -->
+            <lord-icon
+            src="https://cdn.lordicon.com/srupsmbe.json"
+            trigger="loop"
+            delay="2000"
+            colors="primary:#16a9c7,secondary:#16a9c7"
+            style="width:100px;height:100px">
+            </lord-icon>
 
             <h2 class="services__title">Web Developer</h2>
 
@@ -204,7 +229,14 @@
           </article>
 
           <article class="services__card">
-            <i class="ri-pantone-line services__icon"></i>
+            <!-- <i class="ri-pantone-line services__icon"></i> -->
+          <lord-icon
+            src="https://cdn.lordicon.com/ogjpwrxe.json"
+            trigger="loop"
+            delay="2000"
+            colors="primary:#16a9c7,secondary:#16a9c7"
+            style="width:100px;height:100px">
+          </lord-icon>
 
             <h2 class="services__title">UX/UI Designer</h2>
             <p class="services__description">
@@ -213,7 +245,14 @@
             </p>
           </article>  
           <article class="services__card">
-            <i class="ri-pen-nib-line services__icon"></i>
+            <!-- <i class="ri-pen-nib-line services__icon"></i> -->
+            <lord-icon
+                src="https://cdn.lordicon.com/exymduqj.json"
+                trigger="loop"
+                delay="2000"
+                colors="primary:#16a9c7,secondary:#16a9c7"
+                style="width:100px;height:100px">
+            </lord-icon>
             <h2 class="services__title">Graphic Design</h2>
 
             <p class="services__description">
@@ -320,6 +359,9 @@
             </div>
           </article>
         </div>
+        <div class="view-more-btn">
+          <button class="button"><a href="./projects.html">view more</a></button>
+        </div>
       </section>
 
       <!-- CONTACT -->
@@ -402,5 +444,9 @@
       </script>
       <!-- MAIN-JS -->
       <script src="./main.js"></script>
+      <!-- Lordicon -->
+      <script src="https://cdn.lordicon.com/lordicon.js"></script>
+      <script src="https://cdn.lordicon.com/lordicon.js"></script>
+      <script src="https://cdn.lordicon.com/lordicon.js"></script>
 </body>
 </html>
