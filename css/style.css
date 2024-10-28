@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rubik+Dirt&display=swap');
 /* font-family: "Rubik Dirt", system-ui; */
-
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rubik+Dirt&family=Viga&display=swap');
+/* font-family: "Viga", sans-serif; */
 
 /* DEFAULT: HSL(162, 100%, 40%)
 ORANGE: HSL(14, 100%, 65%) - BLUE: HSL(210, 100%, 70%)
@@ -164,7 +165,7 @@ grid{
 
 .nav__logo span{
     color: hsl(208, 100%, 50%);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: "Viga", sans-serif;
     font-size: 19px;
 }
 .cicle{
@@ -278,6 +279,11 @@ grid{
  .home__title{
     /* color: var(--first-color); */
     color: hsl(208, 100%, 10%);
+ }
+ .home__subtitle{
+    span{
+        font-weight: 700;
+    }
  }
  .home__title{
     font-size: var(--biggest-font-size);
